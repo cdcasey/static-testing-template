@@ -14,7 +14,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|css|jsx)\"",
+    "format": "yarn prettier -- --write",
+    "check-format": "yarn prettier -- --list-different",
+    "validate": "yarn check-format && yarn lint && yarn build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +37,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "prettier": "^1.19.1"
   }
 }
