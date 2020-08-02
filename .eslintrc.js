@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2020: true,
   },
+  //   extends: ['eslint:recommended'],
   extends: ['airbnb-base'],
   parserOptions: {
     ecmaVersion: 11,
