@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
@@ -16,12 +16,15 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
   }
 }
